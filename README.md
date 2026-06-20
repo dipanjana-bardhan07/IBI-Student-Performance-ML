@@ -1,7 +1,229 @@
-🤖 Bharat Intern: Machine Learning PortfolioWelcome to my Machine Learning internship repository for Bharat Intern. This repository contains the complete implementation, datasets, and predictive models developed during my tenure as an intern. The primary focus of these tasks is applying predictive analytics to solve real-world regression and classification challenges.📘 DocumentationProject OverviewDuring this virtual internship, I worked on engineering predictive solutions using core Machine Learning workflows. This repository houses structural implementations of standard ML tasks, emphasizing clean data pipelines, thorough exploratory analysis, and model validation.Problem StatementThe internship required solving multiple business and exploratory problems:Task 1: House Price Prediction (Regression): Estimating continuous real estate valuations based on regional, structural, and socio-economic feature vectors.Task 2: Titanic Survival Classification (Classification): Predicting an individual's binary survival outcome based on sparse demographic and ticketing variables.ObjectiveTo build resilient data preprocessing workflows capable of handling missing records, extreme outliers, and categorical feature sets.To perform rigorous Exploratory Data Analysis (EDA) to map feature distributions and target correlations.To train, optimize, and cross-validate linear and non-linear machine learning algorithms to achieve robust predictive accuracy.Dataset InformationThe models are trained using industry-standard open datasets:House Prices Dataset: Contains categorical and numerical structural attributes (e.g., total rooms, geographic area, age of property).Titanic Dataset: Features sparse records covering passenger classes, age brackets, gender, and fare details.Features UsedNumeric Features: Imputed and scaled metrics including age, family counts, spatial dimensions, and cost values.Categorical Encoding: Processed features via One-Hot Encoding and Label Encoding techniques to match algorithmic mathematical matrices.Dataset Generation ProcessExtraction: Pulled initial unstructured source files (.csv format).Imputation: Handled missing elements using median metrics for highly skewed features and mode-based frequencies for categorical data.Feature Scaling: Applied standard scaling methodologies to eliminate magnitude bias across distance-based evaluation scripts.🛠️ Technologies & Libraries UsedThe entire portfolio is developed using the core Python data science ecosystem:Python 3.x: Primary scripting framework.Pandas & NumPy: For structure manipulation, filtering, and high-performance vector calculations.Scikit-Learn: The architectural backbone for model training, feature selection, pipeline building, and evaluation metrics.Matplotlib & Seaborn: Used exclusively to generate visual statistical plots, tracking distributions, and checking feature multicollinearity.🚀 How to Run the ProjectInstallation InstructionsFirst, clone this repository locally to your machine:Bashgit clone https://github.com/dipanjana-bardhan07/Bharat-Intern-ML.git
-cd Bharat-Intern-ML
-Install the complete dependency stack directly via pip:Bashpip install -r requirements.txt
-Execution StepsEach project task is meticulously structured within localized directory files. You can execute them seamlessly using your local environment:Bash# To run exploratory or training files via terminal
-python tasks/house_price_prediction.py
-python tasks/titanic_classification.py
-(Alternatively, you can open the provided .ipynb files via Jupyter Notebooks or Google Colab for an interactive step-by-step review).📊 Results & InsightsEDA InsightsHouse Prices: Analysis revealed a strong positive linear relationship between a property’s primary square footage and target valuation, while correlation dropped significantly for secondary features.Titanic Survival: Gender proved to be the single most defining categorical feature weight; survival rates among female passengers surpassed male passengers by a margin greater than 50%.Model Performance MetricsOur models were strictly evaluated across distinct validation sets using standardized mathematical formulas:Task NameModel TrainedPrimary MetricValidation ScoreStatusHouse Price PredictionLinear Regression$R^2$ Score0.842Highly StableTitanic ClassificationRandom ForestAccuracy / F10.815RobustPrediction Examples🏠 House Valuation Example:Input Parameters: Area: 2500 sq ft, Rooms: 3, Age: 5 YearsModel Prediction Output: $342,500🚢 Titanic Classification Example:Input Parameters: Pclass: 3rd, Sex: Male, Age: 22Model Prediction Output: 0 (Did Not Survive)🌐 LinkedIn / Demo SubmissionAs a critical milestone of the Bharat Intern framework, a comprehensive project presentation post has been shared showcasing:High-definition screenshots of our feature correlation heatmaps.Comparative breakdown charts across both algorithmic pipelines.Key insights regarding structural text tokenization and model deployment performance.⭐ Bonus Challenges ImplementedTo maximize project depth and expand beyond basic pipeline layouts, the following iterations were built:📉 Algorithmic Comparison Model: Built comparative benchmarking scripts tracking performance differentials across Simple Linear vs. Ensemble Tree architectures.📊 Feature Importance Mapping: Integrated explicit feature extraction visualizations detailing precisely which variables drive final regression weights the hardest.💻 Interactive Local Interface: Formulated mini-testing scripts to allow direct parameter testing directly from user terminal lines.
+# 🎓 Student Performance Prediction System
+
+## Machine Learning Internship Project — IBI
+
+A Machine Learning based regression project developed during the **IBI Machine Learning Internship Program**.
+
+The objective of this project is to analyze student academic factors and build a predictive model that estimates a student's **Final Exam Score** based on attendance, study patterns, previous performance, and other relevant attributes.
+
+---
+
+# 📌 Project Objective
+
+The goal of this project is to develop an end-to-end Machine Learning workflow that includes:
+
+- Data collection and preparation
+- Data cleaning and preprocessing
+- Exploratory Data Analysis (EDA)
+- Feature engineering
+- Model training
+- Model evaluation
+- Real-time prediction
+
+This project demonstrates the application of Machine Learning techniques to solve a real-world educational analytics problem.
+
+---
+
+# 📊 Problem Statement
+
+Student academic performance depends on multiple factors such as:
+
+- Attendance
+- Study hours
+- Assignment completion
+- Previous exam scores
+- Classroom participation
+- Parent education level
+- Availability of learning resources
+
+The task is to build a regression model that can predict the expected final exam score of a student using these features.
+
+---
+
+# 📁 Dataset Description
+
+The dataset contains student-related academic information.
+
+## Features:
+
+| Feature | Description |
+|---|---|
+| StudentID | Unique student identifier |
+| Age | Student age |
+| Gender | Student gender |
+| AttendancePercentage | Attendance percentage |
+| StudyHoursPerWeek | Weekly study hours |
+| AssignmentCompletionRate | Assignment completion percentage |
+| PreviousExamScore | Previous exam performance |
+| ParticipationScore | Classroom participation score |
+| ExtracurricularActivities | Activity participation |
+| InternetAccessAtHome | Home internet availability |
+| ParentEducationLevel | Parent education level |
+
+### Target Variable:
+
+`FinalExamScore`
+
+The model predicts this value.
+
+---
+
+# 🧹 Data Preprocessing
+
+The following preprocessing steps were performed:
+
+✔ Checked dataset structure  
+✔ Removed duplicate records  
+✔ Handled missing values  
+
+Numerical columns:
+- Filled missing values using median
+
+Categorical columns:
+- Filled missing values using mode
+
+Feature transformation:
+- Converted categorical values into numerical format
+
+---
+
+# 🔎 Exploratory Data Analysis
+
+The project includes:
+
+## 📈 Attendance vs Final Score
+
+Analyzed the relationship between attendance and academic performance.
+
+## 📚 Parent Education Analysis
+
+Studied how parent education level impacts student scores.
+
+## 🔥 Correlation Analysis
+
+Identified relationships between important academic features.
+
+## 📊 Score Distribution
+
+Visualized the distribution of final exam scores.
+
+---
+
+# 🤖 Machine Learning Model
+
+## Random Forest Regressor 🌲
+
+The model used:
+
+```
+RandomForestRegressor
+```
+
+### Why Random Forest?
+
+- Handles complex relationships
+- Works well with tabular datasets
+- Reduces overfitting
+- Provides stable predictions
+
+---
+
+# 📏 Model Evaluation
+
+The model performance is measured using:
+
+### MAE
+Mean Absolute Error
+
+### MSE
+Mean Squared Error
+
+### RMSE
+Root Mean Squared Error
+
+### R² Score
+Measures how well the model explains the variation in target values.
+
+---
+
+# 🛠️ Technologies Used
+
+| Technology | Purpose |
+|---|---|
+| Python | Programming Language |
+| Pandas | Data Processing |
+| NumPy | Numerical Operations |
+| Matplotlib | Visualization |
+| Seaborn | Data Analysis |
+| Scikit-Learn | Machine Learning |
+
+---
+
+# 📂 Project Structure
+
+```
+IBI-Student-Performance-ML
+
+│
+├── data/
+│   └── student_performance_dataset.csv
+│
+├── Notebook/
+│   └── student_performance_analysis.ipynb
+│
+├── models/
+│
+├── src/
+│
+├── requirements.txt
+│
+└── README.md
+```
+
+---
+
+# ▶️ How To Run
+
+Clone the repository:
+
+```bash
+git clone https://github.com/dipanjana-bardhan07/OIBSIP.git
+```
+
+Install dependencies:
+
+```bash
+pip install -r requirements.txt
+```
+
+Open the notebook:
+
+```
+Notebook/student_performance_analysis.ipynb
+```
+
+Run all cells.
+
+---
+
+# 🔮 Future Improvements
+
+Future enhancements:
+
+- Deploy model using Streamlit
+- Create web-based prediction interface
+- Compare multiple ML algorithms
+- Add automated student performance recommendations
+
+---
+
+# 👩‍💻 Author
+
+**Dipanjana Bardhan**
+
+Machine Learning Intern  
+IBI Internship Program
+
+---
+
+⭐ This project demonstrates practical implementation of Machine Learning concepts on real-world educational data.
